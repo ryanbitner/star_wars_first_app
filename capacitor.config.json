@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "star_wars_first_app",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}
