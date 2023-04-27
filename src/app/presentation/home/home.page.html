@@ -1,0 +1,15 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Star Wars Characters
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let character of characters " routerLink="character-detail" [queryParams]="{url: character.url}">
+      {{ character.name }}
+    </ion-item>
+  </ion-list>
+</ion-content>

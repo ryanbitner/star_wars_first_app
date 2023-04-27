@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title [textContent]="'character.name'"></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-buttons>
+      <ion-back-button [defaultHref]="'home'">
+
+      </ion-back-button>
+    </ion-buttons>
+    <ion-toolbar>
+     
+      <ion-title size="large">{{ character?.name }}</ion-title>
+   
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card>
+    <ion-item>
+      Eye Color: {{ character?.eyeColor }}
+    </ion-item>
+    <ion-item>
+      Hair Color: {{ character?.hairColor }}
+    </ion-item>
+  </ion-card>
+</ion-content>
