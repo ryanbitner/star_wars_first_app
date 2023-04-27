@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CharacterRepository } from './domain/repositories/character.repository';
 import { APICharacterRepositoryImp } from './data/respositories/api-character-implementation.repository';
-import { GetCharactersUsecase } from './domain/usecases/get-characters.usercase';
+import { GetCharacterList } from './domain/usecases/get-characters.usercase';
 
 @NgModule({
   providers: [

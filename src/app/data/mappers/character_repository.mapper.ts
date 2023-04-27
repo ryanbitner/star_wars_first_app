@@ -8,6 +8,6 @@ export class CharacterRepositoryImplementationMapper extends Mapper<CharacterEnt
     }
     override mapTo(param: Character): CharacterEntity {
         let url = "https://swapi.dev/api/people/{{ param.id }}";
-        throw new CharacterEntity(param.name, param.hairColor, param.eyeColor, url);
+        return new CharacterEntity(param.name, param.hairColor, param.eyeColor, url);
     }
 }

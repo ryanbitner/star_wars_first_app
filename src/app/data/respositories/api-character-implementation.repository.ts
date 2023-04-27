@@ -6,24 +6,26 @@ import { Injectable } from '@angular/core';
 import { CharacterEntity } from '../entities/character.entity';
 import { CharacterRepositoryImplementationMapper } from '../mappers/character_repository.mapper';
 import { CharacterListEntity } from '../entities/character-list-entitiy';
+import { CharacterList } from 'src/app/domain/entities/character-list.model';
+import { CharacterListMapperImpl } from '../mappers/character-list-repository.mapper';
 
 @Injectable({
   providedIn: 'root',
 })
 export class APICharacterRepositoryImp implements CharacterRepository {
-  characterMapper = new CharacterRepositoryImplementationMapper();
+
+    characterListMapper = new CharacterListMapperImpl;
+    characterDetailMapper = new CharacterRepositoryImplementationMapper();
+
+  BASE_PEOPLE_URL = 'https://swapi.dev/api/people';
 
   constructor(private http: HttpClient) {}
 
     getCharacter(url: string): Observable<Character> {
-        return this.http.get<CharacterEntity>(url).pipe(map(this.characterMapper.mapFrom));
+        return this.http.get<CharacterEntity>(url).pipe(map(this.characterDetailMapper.mapFrom));
     }
 
-  getCharacters(): Observable<Character[]> {
-    return this.http.get<CharacterListEntity>('https://swapi.dev/api/people').pipe(
-     map(data =>{
-        let characters = data.results;
-        return characters.map(character => this.characterMapper.mapFrom(character));})
-    );
+  getCharacters(url?: string): Observable<CharacterList> {
+    return this.http.get<CharacterListEntity>(url??this.BASE_PEOPLE_URL).pipe(map(this.characterListMapper.mapFrom));
   }
 }

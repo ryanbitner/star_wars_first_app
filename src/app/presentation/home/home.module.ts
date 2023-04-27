@@ -5,8 +5,6 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
-import { Character } from 'src/app/domain/entities/character.model';
-import { GetCharactersUsecase } from 'src/app/domain/usecases/get-characters.usercase';
 import { HttpClientModule } from '@angular/common/http';
 
 
