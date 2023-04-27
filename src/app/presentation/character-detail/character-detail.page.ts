@@ -14,8 +14,6 @@ export class CharacterDetailPage implements OnInit {
 
   character: Character | undefined;
 
-  characterChanged = new Subject<Character>(); 
-
   constructor(private getCharacterUsecase: GetCharacterUsecase, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
@@ -23,9 +21,7 @@ export class CharacterDetailPage implements OnInit {
       let url = params.get('url');
       if (url !== null) {
         this.getCharacterUsecase.execute({url: url}).subscribe(character => {
-          console.log(character);
-          this.character =character;
-
+          this.character = character;
         });
       }
     })
