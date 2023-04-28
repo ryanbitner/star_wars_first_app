@@ -1,3 +1,23 @@
 .character-item {
   color: blue;
 }
+
+.title___anim {
+  animation-duration: 3s;
+  animation-name: growingtext;
+  animation-iteration-count: 1;
+}
+
+@keyframes growingtext {
+  from {
+    font-size: 0%;
+    color: yellow;
+    width: 300%;
+  }
+
+  80% {
+    color: red;
+    font-size: 200%;
+    width: 100%;
+  }
+}
