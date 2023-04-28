@@ -1,5 +1,26 @@
 .character-item {
-  color: blue;
+  color: white;
+
+}
+
+.character-item___anim {
+  animation-duration: 1s;
+  animation-name: flashingtext;
+  animation-iteration-count: 3;
+}
+
+@keyframes flashingtext {
+  from {
+    color: red;
+  }
+
+  to {
+    color: blue
+  }
+}
+
+.title {
+  font-family: 'Bruno Ace SC';
 }
 
 .title___anim {
@@ -20,4 +41,42 @@
     font-size: 200%;
     width: 100%;
   }
+}
+
+.background___gradient {
+  background-image: linear-gradient(red, red, blue);
+}
+
+.background___anim {
+  animation-duration: 3s;
+  animation-name: gradient;
+}
+
+@keyframes gradient {
+  from {
+    background-color:blue ;
+    background-image: none;
+
+  }
+
+  50% {
+    background-color: red;
+    background-image: none;
+
+  }
+
+  to {
+    background-color: blue;
+    background-image: none;
+
+  }
+}
+
+.fullwidth {
+  width: fit-content;
+}
+
+.nobg {
+  --background: none ;
+  background-color: transparent ;
 }
