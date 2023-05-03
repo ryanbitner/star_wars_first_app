@@ -3,7 +3,7 @@ import { LoadingController } from '@ionic/angular';
 import { Subscription } from 'rxjs';
 import { CharacterList } from 'src/app/domain/entities/character-list.model';
 import { Character } from 'src/app/domain/entities/character.model';
-import { GetCharacterList } from 'src/app/domain/usecases/get-characters.usercase';
+import { GetCharacterList } from 'src/app/domain/usecases/get-character-list.usercase';
 import { CharacterService } from '../controllers/character.service';
 
 @Component({

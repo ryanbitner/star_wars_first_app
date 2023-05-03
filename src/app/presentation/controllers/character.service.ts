@@ -6,15 +6,15 @@ import { Character } from 'src/app/domain/entities/character.model';
 })
 export class CharacterService {
 
-  selectedCharacted: Character | undefined;
+  selectedCharacter: Character | undefined;
 
   constructor() { }
 
   selectCharacter(character: Character) {
-    this.selectedCharacted = character;
+    this.selectedCharacter = character;
   }
 
   getCharacter(): Character | undefined {
-    return this.selectedCharacted;
+    return this.selectedCharacter;
   }
 }

@@ -1,30 +1,31 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title class="title___anim title"> Star Wars Characters </ion-title>
+    <ion-title class="title___anim home-title"> Star Wars Characters </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="home-style">
 
   <ion-grid class="background___gradient">
     <ion-row class="ion-align-items-center" > 
       <ion-col size="12" class="nobg">
-        <ion-list class="nobg" >
-          <ion-item class="nobg character-item character-item___anim  " 
+        <ion-list>
+          <ion-item
             *ngFor="let character of characterList?.characters "
             routerLink="character-detail"
             (click)="onSelectCharacter(character)"
+            class="home-title"
           >
             {{ character.name }}
           </ion-item>
         </ion-list>
       </ion-col>
       <ion-col size="12" class="ion-align-text-center">
-        <ion-button class="ion-text-center"
+        <ion-button class="ion-text-center home-button"
         *ngIf="characterList.nextPage !== null && characterList.nextPage !== undefined"
         (click)="onLoadMore()"
         [disabled]="isLoading"
-        ><span>Load More</span></ion-button
+        ><span class="home-title">Load More</span></ion-button
       >
       </ion-col>
     </ion-row>

@@ -1,82 +1,12 @@
-.character-item {
-  color: white;
-
+.home-style{
+  --ion-background-color: #0061ff;
+  --ion-text-color: #ffffff;
 }
 
-.character-item___anim {
-  animation-duration: 1s;
-  animation-name: flashingtext;
-  animation-iteration-count: 3;
+.home-button{
+  --background: #9c9c9c;
 }
 
-@keyframes flashingtext {
-  from {
-    color: red;
-  }
-
-  to {
-    color: blue
-  }
-}
-
-.title {
-  font-family: 'Bruno Ace SC';
-}
-
-.title___anim {
-  animation-duration: 3s;
-  animation-name: growingtext;
-  animation-iteration-count: 1;
-}
-
-@keyframes growingtext {
-  from {
-    font-size: 0%;
-    color: yellow;
-    width: 300%;
-  }
-
-  80% {
-    color: red;
-    font-size: 200%;
-    width: 100%;
-  }
-}
-
-.background___gradient {
-  background-image: linear-gradient(red, red, blue);
-}
-
-.background___anim {
-  animation-duration: 3s;
-  animation-name: gradient;
-}
-
-@keyframes gradient {
-  from {
-    background-color:blue ;
-    background-image: none;
-
-  }
-
-  50% {
-    background-color: red;
-    background-image: none;
-
-  }
-
-  to {
-    background-color: blue;
-    background-image: none;
-
-  }
-}
-
-.fullwidth {
-  width: fit-content;
-}
-
-.nobg {
-  --background: none ;
-  background-color: transparent ;
+.home-title{
+  --ion-font-family: "bruno-ace";
 }
