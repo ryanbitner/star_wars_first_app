@@ -5,7 +5,7 @@ import { CharacterList } from "../entities/character-list.model";
 import { Injectable } from "@angular/core";
 
 @Injectable()
-export class GetCharacterList implements UseCase<{url?: string}, CharacterList>{
+export class GetCharacterListUsecase implements UseCase<{url?: string}, CharacterList>{
 
     constructor(private characterRepository: CharacterRepository) {}
 

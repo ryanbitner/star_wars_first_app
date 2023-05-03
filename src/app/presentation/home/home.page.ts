@@ -3,14 +3,14 @@ import { LoadingController } from '@ionic/angular';
 import { Subscription } from 'rxjs';
 import { CharacterList } from 'src/app/domain/entities/character-list.model';
 import { Character } from 'src/app/domain/entities/character.model';
-import { GetCharacterList } from 'src/app/domain/usecases/get-character-list.usercase';
+import { GetCharacterListUsecase } from 'src/app/domain/usecases/get-character-list.usercase';
 import { CharacterService } from '../controllers/character.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
-  providers: [GetCharacterList]
+  providers: [GetCharacterListUsecase]
 })
 export class HomePage implements OnDestroy {
 
@@ -18,7 +18,7 @@ export class HomePage implements OnDestroy {
 
   characterSub?: Subscription;
 
-  constructor(private getCharacters: GetCharacterList, private loadingCtrl: LoadingController, private characterService: CharacterService) {}
+  constructor(private getCharacters: GetCharacterListUsecase, private loadingCtrl: LoadingController, private characterService: CharacterService) {}
 
   isLoading: boolean = false;
 
